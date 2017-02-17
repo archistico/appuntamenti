@@ -11,12 +11,9 @@ class Orario {
     public $attivo;
 }
 
-// UPDATE `orario` SET `attivo` = '1' WHERE `orario`.`idorario` = 9;
-
 function caricaDatiOrario() {
     
     include 'config.php';
-
     $orari = array();
 
     try {
