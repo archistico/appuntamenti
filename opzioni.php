@@ -61,6 +61,14 @@ $orari = caricaDatiOrario();
       </div>
 
       <div>
+      
+      <div class="row">
+      <div class="col-lg-12">
+        
+          <p>Seleziona gli orari in cui fai le visite, in base ai giorni della settimana. Solo quelli con la spunta verranno proposti quando si aggiunge una prenotazione</p>
+        
+      </div>
+      </div>
 
       <form name="Form" action="modificaorarioambulatorio.php" method="post">
 
