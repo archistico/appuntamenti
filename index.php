@@ -66,18 +66,9 @@
         <div class="col-lg-6">
 		<div class="form-group">
              <label>Data selezionata</label>
-             <input type="text" class="form-control" placeholder="data" name='dataselezionatatesto' id="dataselezionatatesto" required>
-			 <input type="hidden" name="dataselezionata" value="" id="dataselezionata" />
+             <input type="text" class="form-control  input-lg" placeholder="data" name='dataselezionatatesto' id="dataselezionatatesto" required>
          </div>
-          <div class="form-group">
-             <label>Tipologia</label>
-             <select class="form-control" style="width: 100%;" name='cliente' required>
-                <option value="15m">15 minuti</option>
-				<option value="30m">30 minuti</option>
-				<option value="45m">45 minuti</option>
-				<option value="1h">1 ora</option>
-             </select>
-         </div>
+          
 		 <div class="form-group">
              <label>Cognome Nome</label>
              <input type="text" class="form-control" placeholder="Cognome Nome" name='nome' required>
@@ -125,7 +116,6 @@
 			moment.locale('it');
 			//$('#dataselezionatatesto').html(moment(date).format('L'));
 			$('#dataselezionatatesto').val(moment(date).format('L'));
-			$('#dataselezionata').val(moment(date).format('L'));
 		}
 	})
 	</script>
