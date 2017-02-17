@@ -16,6 +16,7 @@
 
     <!-- Custom styles for this template -->
     <link href="css/jumbotron-narrow.css" rel="stylesheet">
+    <link href="css/appuntamenti.css" rel="stylesheet">
 	
 	<!-- Air-datepicker -->
 	<link href="dist/air-datepicker/css/datepicker.min.css" rel="stylesheet" type="text/css">

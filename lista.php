@@ -16,6 +16,7 @@
 
     <!-- Custom styles for this template -->
     <link href="css/jumbotron-narrow.css" rel="stylesheet">
+    <link href="css/appuntamenti.css" rel="stylesheet">
 	
 	<!-- Air-datepicker -->
 	<link href="dist/air-datepicker/css/datepicker.min.css" rel="stylesheet" type="text/css">
@@ -47,14 +48,42 @@
         <h1>Appuntamenti</h1>
         <p class="lead">Sito dello studio in cui sono segnati gli appuntamenti</p>
       </div>
-		
-		
+      
+      <!-- GIORNO -->
       <div class="row">
-	  
-        <div class="col-lg-6">
-          
+        <div class="col-lg-12">
+          <h1>Lunedì 01/01/2017</h1>  
         </div>
       </div>
+		  <div class="row">
+        <div class="col-lg-12">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Ora</th>
+                <th>Nome</th>
+                <th>Note</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>8:15 - 8:30</td>
+                <td>Emilie Rollandin</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>8:30 - 8:45</td>
+                <td>Ciccia Pasticcia</td>
+                <td>Mal di pancia</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!-- FINE GIORNO -->
 	  
       <br>
 	  <div class="footer">

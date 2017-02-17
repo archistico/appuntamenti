@@ -15,6 +15,7 @@
 
     <!-- Custom styles for this template -->
     <link href="css/jumbotron-narrow.css" rel="stylesheet">
+    <link href="css/appuntamenti.css" rel="stylesheet">
 	
 	<!-- Air-datepicker -->
 	<link href="dist/air-datepicker/css/datepicker.min.css" rel="stylesheet" type="text/css">
@@ -73,9 +74,13 @@
              <label>Cognome Nome</label>
              <input type="text" class="form-control" placeholder="Cognome Nome" name='nome' required>
          </div>
-        </div>
 
-        
+         <div class="form-group">
+             <label>Note</label>
+             <input type="text" class="form-control" placeholder="Note" name='note'>
+         </div>
+
+        </div>
       </div>
 	
 	 
