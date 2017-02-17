@@ -68,6 +68,7 @@
     $dataselezionatatesto = str_replace("/", "-", $_GET['dataselezionatatesto']);
     //echo $dataselezionatatesto; die();
     $dataselezionata = DateTime::createFromFormat('d-m-Y', $dataselezionatatesto);
+    $dataDB = $dataselezionata->format('Y-m-d');
 
     $nome = $_GET['nome'];
     $note = $_GET['note'];
@@ -100,7 +101,7 @@
           $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
           $db->setAttribute(PDO::MYSQL_ATTR_INIT_COMMAND, 'SET NAMES UTF8');
 
-          $sql = "SELECT * FROM app WHERE data = '".$dataselezionatatesto."'";
+          $sql = "SELECT * FROM app WHERE data = '".$dataDB."'";
 
           $result = $db->query($sql);
           foreach ($result as $row) {

@@ -21,7 +21,8 @@ if (isset($_GET['nome'])) {
 }
 
 if (isset($_GET['data'])) {
-    $data = $_GET['data'];
+    $data = DateTime::createFromFormat('d-m-Y', $_GET['data']);
+    $datastringa = $data->format('Y-m-d');
 } else {
     $errors['data'] = 'data non passato';
 }
@@ -39,36 +40,6 @@ if (isset($_GET['fkorario'])) {
 }
 
 // FINE CARICA DATI
-/*
-//if (empty($errors)) {
-    //echo $nome. " ". $data. " ". $note. " ". $fkorario; die();
-    
-    // METODO CON ROLLBACK
-    $db = new PDO("mysql:host=" . $dbhost . ";dbname=" . $dbname, $dbuser, $dbpswd, array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,PDO::ATTR_EMULATE_PREPARES => false ));
-
-    //Inizia la transazione
-    $db->beginTransaction();
-
-    try {
-        $sql = "INSERT INTO app (idapp, data, fkorario, nome, note) VALUES (NULL, '?', '?', '?', '?');";
-      
-        $stmt = $db->prepare($sql);
-        $stmt->execute(array($data, $fkorario, $nome, $note));
-        
-        //Se non ci sono eccezioni commit
-        $db->commit();
-    }
-    //Se sollevate eccezioni
-    catch(Exception $e){
-        echo $e->getMessage();
-        //Rollback la transazione
-        $db->rollBack();
-        $errors['DB'] = 'Errore nel database';
-    }
-
-    $db = NULL;
-//}
-*/
 
 if (empty($errors)) {
     try {
@@ -78,7 +49,7 @@ if (empty($errors)) {
         $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
         $db->setAttribute(PDO::MYSQL_ATTR_INIT_COMMAND, 'SET NAMES UTF8');
 
-        $sql = "INSERT INTO app (idapp, data, fkorario, nome, note) VALUES (NULL, '$data', '$fkorario', '$nome', '$note');";
+        $sql = "INSERT INTO app (idapp, data, fkorario, nome, note) VALUES (NULL, '$datastringa', '$fkorario', '$nome', '$note');";
 
         $db->exec($sql);
 
