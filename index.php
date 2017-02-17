@@ -47,7 +47,7 @@
         <p class="lead">Sito dello studio in cui sono segnati gli appuntamenti</p>
       </div>
 		
-		<form name="Form" action="selezionedata.php" method="get">
+		<form name="Form" action="selezioneorario.php" method="get">
 		
 		<div class="row">
 	    <div class="col-lg-12">
@@ -66,21 +66,21 @@
         <div class="col-lg-6">
 		<div class="form-group">
              <label>Data selezionata</label>
-             <h1 id="dataselezionatatesto"></h1>
+             <input type="text" class="form-control" placeholder="data" name='dataselezionatatesto' id="dataselezionatatesto" required>
 			 <input type="hidden" name="dataselezionata" value="" id="dataselezionata" />
          </div>
           <div class="form-group">
              <label>Tipologia</label>
              <select class="form-control" style="width: 100%;" name='cliente' required>
-                <option>15 minuti</option>
-				<option>30 minuti</option>
-				<option>45 minuti</option>
-				<option>1 ora</option>
+                <option value="15m">15 minuti</option>
+				<option value="30m">30 minuti</option>
+				<option value="45m">45 minuti</option>
+				<option value="1h">1 ora</option>
              </select>
          </div>
 		 <div class="form-group">
              <label>Cognome Nome</label>
-             <input type="text" class="form-control" placeholder="Cognome Nome" name='riferimento'>
+             <input type="text" class="form-control" placeholder="Cognome Nome" name='nome' required>
          </div>
         </div>
 
@@ -123,7 +123,8 @@
 	$('#dataappuntamento').datepicker({
 		onSelect: function onSelect(fd, date) {
 			moment.locale('it');
-			$('#dataselezionatatesto').html(moment(date).format('L'));
+			//$('#dataselezionatatesto').html(moment(date).format('L'));
+			$('#dataselezionatatesto').val(moment(date).format('L'));
 			$('#dataselezionata').val(moment(date).format('L'));
 		}
 	})

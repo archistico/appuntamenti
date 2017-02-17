@@ -59,25 +59,20 @@
 	  
 	  <div class="row">
 		<div class="col-lg-12">
-	  <div class="radio">
-		<label>
-			<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-			8:00 - 8:15
-		</label>
+			<h1 id="dataselezionatatesto">01/01/2017</h1>
+			<div class="radio">
+				<label><input type="radio" name="inizio" id="in800" value="in8" checked>8:00 - 8:15</label>
+			</div>
+			<div class="radio">
+				<label><input type="radio" name="inizio" id="in815" value="in815">8:15 - 8:30</label>
+			</div>
+			<div class="radio">
+				<label><input type="radio" name="inizio" id="in830" value="in830">8:30 - 8:45</label>
+			</div>
+			<div class="radio disabled">
+				<label><input type="radio" name="inizio" id="in845" value="in845" disabled>8:45 - 9:00 - Occupato</label>
+			</div>
 		</div>
-		<div class="radio">
-		<label>
-			<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-			8:15 - 8:30
-		</label>
-		</div>
-		<div class="radio disabled">
-		<label>
-			<input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
-			8:30 - 8:45
-		</label>
-	 </div>
-	 </div>
 	 </div>
 	 
 	 <hr>
@@ -89,9 +84,7 @@
           <button type="submit" class="btn btn-block btn-primary btn-lg">INSERISCI</button>
         </div>
       </div>
-	  
-	  <input type="hidden" name="opere" value="" id="opere" />
-      	  
+	  	        	  
 	  </form>
       <br>
 	  <div class="footer">
