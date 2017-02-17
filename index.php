@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -35,10 +34,10 @@
     <div class="container">
       <div class="header">
         <ul class="nav nav-pills pull-right">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">Nuovo</a></li>
-          <li><a href="#">Lista</a></li>
-		  <li><a href="#">Opzioni</a></li>
+          <li class="active"><a href="index.php">Home</a></li>
+          <!-- <li><a href="#">Nuovo</a></li> -->
+          <li><a href="lista.php">Lista</a></li>
+		  <li><a href="opzioni.php">Opzioni</a></li>
         </ul>
         <h3 class="text-muted">Dott.ssa Rollandin Christine</h3>
       </div>
@@ -48,10 +47,28 @@
         <p class="lead">Sito dello studio in cui sono segnati gli appuntamenti</p>
       </div>
 		
-		<form>
-      <div class="row">
+		<form name="Form" action="selezionedata.php" method="get">
+		
+		<div class="row">
+	    <div class="col-lg-12">
+		<div class="progress">
+			<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width:30%">30%</div>
+		</div>
+		</div>
+		</div>
+      
+	  <div class="row">
+	  
+		<div class="col-lg-6">
+          <div class="datepicker-here" data-language='it' id="dataappuntamento"></div>
+        </div>
 	  
         <div class="col-lg-6">
+		<div class="form-group">
+             <label>Data selezionata</label>
+             <h1 id="dataselezionatatesto"></h1>
+			 <input type="hidden" name="dataselezionata" value="" id="dataselezionata" />
+         </div>
           <div class="form-group">
              <label>Tipologia</label>
              <select class="form-control" style="width: 100%;" name='cliente' required>
@@ -67,45 +84,20 @@
          </div>
         </div>
 
-        <div class="col-lg-6">
-          <div class="datepicker-here pull-right" data-language='it'></div>
-        </div>
+        
       </div>
-	  
-	  
-	  <div class="row">
-		<div class="col-lg-12">
-	  <div class="radio">
-		<label>
-			<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-			8:00 - 8:15
-		</label>
-		</div>
-		<div class="radio">
-		<label>
-			<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-			8:15 - 8:30
-		</label>
-		</div>
-		<div class="radio disabled">
-		<label>
-			<input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
-			8:30 - 8:45
-		</label>
-	 </div>
-	 </div>
-	 </div>
+	
 	 
 	 <hr>
 	  <div class="row">
 		<div class="col-lg-6">
-          <button type="submit" class="btn btn-block btn-default btn-lg">CANCELLA</button>
+          <button type="reset" class="btn btn-block btn-default btn-lg">CANCELLA</button>
         </div>
         <div class="col-lg-6">
           <button type="submit" class="btn btn-block btn-primary btn-lg">AVANTI</button>
         </div>
       </div>
-	  
+	  	  
 	  </form>
       <br>
 	  <div class="footer">
@@ -125,6 +117,16 @@
 	<script src="dist/air-datepicker/js/datepicker.min.js"></script>
 	<!-- Include Italian language -->
     <script src="dist/air-datepicker/js/i18n/datepicker.it.js"></script>
+	<script src="dist/moment/moment-with-locales.js"></script>
 	
+	<script>
+	$('#dataappuntamento').datepicker({
+		onSelect: function onSelect(fd, date) {
+			moment.locale('it');
+			$('#dataselezionatatesto').html(moment(date).format('L'));
+			$('#dataselezionata').val(moment(date).format('L'));
+		}
+	})
+	</script>
   </body>
 </html>
