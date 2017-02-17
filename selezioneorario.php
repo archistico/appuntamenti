@@ -15,8 +15,11 @@
 
     <!-- Custom styles for this template -->
     <link href="css/jumbotron-narrow.css" rel="stylesheet">
-    <link href="css/appuntamenti.css" rel="stylesheet">
-	
+    
+   
+    <!-- Google Fonts -->
+   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+
 	<!-- Air-datepicker -->
 	<link href="dist/air-datepicker/css/datepicker.min.css" rel="stylesheet" type="text/css">
     
@@ -28,6 +31,8 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    
+    <link href="css/appuntamenti.css" rel="stylesheet">
   </head>
 
   <body>
@@ -58,33 +63,116 @@
 		</div>
 		</div>
 	  
+    <?php
+
+    $dataselezionatatesto = str_replace("/", "-", $_GET['dataselezionatatesto']);
+    //echo $dataselezionatatesto; die();
+    $dataselezionata = DateTime::createFromFormat('d-m-Y', $dataselezionatatesto);
+
+    $nome = $_GET['nome'];
+    $note = $_GET['note'];
+
+    $formatterBreve = new IntlDateFormatter('it_IT', IntlDateFormatter::SHORT, IntlDateFormatter::SHORT);
+    $formatterBreve->setPattern('E');
+
+    $formatterLungo = new IntlDateFormatter('it_IT', IntlDateFormatter::SHORT, IntlDateFormatter::SHORT);
+    $formatterLungo->setPattern('EEEE');
+
+    $giornosettimana = $formatterBreve->format($dataselezionata);
+    $giornosettimanaLungo = $formatterLungo->format($dataselezionata);
+    ?>
+
 	  <div class="row">
 		<div class="col-lg-12">
-			<h1 id="dataselezionatatesto">01/01/2017</h1>
-			<div class="radio">
-				<label><input type="radio" name="inizio" id="in800" value="in8" checked>8:00 - 8:15</label>
-			</div>
-			<div class="radio">
-				<label><input type="radio" name="inizio" id="in815" value="in815">8:15 - 8:30</label>
-			</div>
-			<div class="radio">
-				<label><input type="radio" name="inizio" id="in830" value="in830">8:30 - 8:45</label>
-			</div>
-			<div class="radio disabled">
-				<label><input type="radio" name="inizio" id="in845" value="in845" disabled>8:45 - 9:00 - Occupato</label>
-			</div>
+			<h1 id="dataselezionatatesto"><?php echo $giornosettimanaLungo." ". $dataselezionata->format('d-m-Y'); ?></h1>
+			
+      <?php
+
+      include 'config.php';
+
+      $occupato = array();
+
+      // segna tutti gli idorario occupati nel giorno
+        try {
+
+          $db = new PDO("mysql:host=" . $dbhost . ";dbname=" . $dbname, $dbuser, $dbpswd);
+          $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
+          $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
+          $db->setAttribute(PDO::MYSQL_ATTR_INIT_COMMAND, 'SET NAMES UTF8');
+
+          $sql = "SELECT * FROM app WHERE data = '".$dataselezionatatesto."'";
+
+          $result = $db->query($sql);
+          foreach ($result as $row) {
+              $row = get_object_vars($row);
+              $occupato[$row['fkorario']] = $row['nome'];
+          }
+          // chiude il database
+          $db = NULL;
+
+        } catch (PDOException $e) {
+          throw new PDOException("Error  : " . $e->getMessage());
+        }
+  
+
+      // Aggiungi le righe degli orari
+      try {
+
+        $db = new PDO("mysql:host=" . $dbhost . ";dbname=" . $dbname, $dbuser, $dbpswd);
+        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
+        $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
+        $db->setAttribute(PDO::MYSQL_ATTR_INIT_COMMAND, 'SET NAMES UTF8');
+
+        $sql = "SELECT * FROM orario WHERE attivo = 1 AND giornosettimana = '".$giornosettimana."';";
+
+        $result = $db->query($sql);
+        $primo = true;
+
+        //var_dump($occupato); die();
+
+        foreach ($result as $row) {
+            $row = get_object_vars($row);
+            
+            // il primo elemento mettilo in autofocus e richesto
+            $controllo = ($occupato[$row['idorario']] != '')?'disabled':'';
+            $occupatonome = $occupato[$row['idorario']];
+            if($primo == true) {
+              echo "<div class='radio'><label><input type='radio' name='fkorario' id='".$row['idorario']."' value='".$row['idorario']."' ".$controllo." autofocus required>".$row['ora']." ".$occupatonome."</label></div>";  
+              $primo = false;
+            } else {
+              echo "<div class='radio'><label><input type='radio' name='fkorario' id='".$row['idorario']."' value='".$row['idorario']."' ".$controllo." >".$row['ora']." ".$occupatonome."</label></div>";
+            }
+            
+        }
+        // chiude il database
+        $db = NULL;
+        
+      } catch (PDOException $e) {
+        throw new PDOException("Error  : " . $e->getMessage());
+      }
+
+      ?>
+          
 		</div>
 	 </div>
-	 
-	 <hr>
-	  <div class="row">
-		<div class="col-lg-6">
-          <button type="reset" class="btn btn-block btn-default btn-lg">CANCELLA</button>
-        </div>
-        <div class="col-lg-6">
-          <button type="submit" class="btn btn-block btn-primary btn-lg">INSERISCI</button>
-        </div>
+
+    <div class="row">
+		  <div class="col-lg-12">
+        <h3>Nome: <?php echo $nome; ?></h3>
+        <h3>Note: <?php echo $note; ?></h3>
       </div>
+    </div>
+    
+    <input type="hidden" name="nome" value="<?php echo $nome; ?>">
+    <input type="hidden" name="note" value="<?php echo $note; ?>">
+    <input type="hidden" name="data" value="<?php echo $dataselezionatatesto; ?>">
+
+	  <hr>
+	  <div class="row">
+		  <div class="col-lg-12">
+        <button type="submit" class="btn btn-block btn-primary btn-lg">INSERISCI APPUNTAMENTO</button>
+      </div>
+    </div>
 	  	        	  
 	  </form>
       <br>

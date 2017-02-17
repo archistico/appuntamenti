@@ -15,8 +15,11 @@
 
     <!-- Custom styles for this template -->
     <link href="css/jumbotron-narrow.css" rel="stylesheet">
-    <link href="css/appuntamenti.css" rel="stylesheet">
-	
+    
+   
+    <!-- Google Fonts -->
+   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+
 	<!-- Air-datepicker -->
 	<link href="dist/air-datepicker/css/datepicker.min.css" rel="stylesheet" type="text/css">
     
@@ -28,6 +31,8 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    
+    <link href="css/appuntamenti.css" rel="stylesheet">
   </head>
 
   <body>
@@ -86,11 +91,8 @@
 	 
 	 <hr>
 	  <div class="row">
-		<div class="col-lg-6">
-          <button type="reset" class="btn btn-block btn-default btn-lg">CANCELLA</button>
-        </div>
-        <div class="col-lg-6">
-          <button type="submit" class="btn btn-block btn-primary btn-lg">AVANTI</button>
+		        <div class="col-lg-12">
+          <button type="submit" class="btn btn-block btn-primary btn-lg">CONTROLLA DISPONIBILIT&Agrave; ORARIO</button>
         </div>
       </div>
 	  	  

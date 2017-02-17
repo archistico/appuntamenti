@@ -22,8 +22,11 @@ $orari = caricaDatiOrario();
 
     <!-- Custom styles for this template -->
     <link href="css/jumbotron-narrow.css" rel="stylesheet">
-    <link href="css/appuntamenti.css" rel="stylesheet">
-	
+    
+   
+    <!-- Google Fonts -->
+   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+
 	<!-- Air-datepicker -->
 	<link href="dist/air-datepicker/css/datepicker.min.css" rel="stylesheet" type="text/css">
     
@@ -35,6 +38,8 @@ $orari = caricaDatiOrario();
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    
+    <link href="css/appuntamenti.css" rel="stylesheet">
   </head>
 
   <body>
