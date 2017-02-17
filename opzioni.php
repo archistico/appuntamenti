@@ -1,4 +1,6 @@
-
+<?php
+include 'php/orario.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -80,181 +82,181 @@
 
       <div class="row">
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="800" value=""> 8:00 - 8:15</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="1" <?php orarioattivo(1); ?> > 8:00 - 8:15</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="815" value=""> 8:15 - 8:30</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="2" <?php orarioattivo(2); ?> > 8:15 - 8:30</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="830" value=""> 8:30 - 8:45</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="3" <?php orarioattivo(3); ?> > 8:30 - 8:45</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="845" value=""> 8:45 - 9:00</label></div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="900" value=""> 9:00 - 9:15</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="915" value=""> 9:15 - 9:30</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="930" value=""> 9:30 - 9:45</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="945" value=""> 9:45 - 10:00</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="4" <?php orarioattivo(4); ?> > 8:45 - 9:00</label></div>
         </div>
       </div>
 
       <div class="row">
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1000" value=""> 10:00 - 10:15</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="5" <?php orarioattivo(); ?> > 9:00 - 9:15</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1015" value=""> 10:15 - 10:30</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="6" <?php orarioattivo(); ?> > 9:15 - 9:30</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1030" value=""> 10:30 - 10:45</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="7" <?php orarioattivo(); ?> > 9:30 - 9:45</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1045" value=""> 10:45 - 11:00</label></div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1100" value=""> 11:00 - 11:15</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1115" value=""> 11:15 - 11:30</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1130" value=""> 11:30 - 11:45</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1145" value=""> 11:45 - 12:00</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="8" <?php orarioattivo(); ?> > 9:45 - 10:00</label></div>
         </div>
       </div>
 
       <div class="row">
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1200" value=""> 12:00 - 12:15</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="9" <?php orarioattivo(); ?> >  10:00 - 10:15</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1215" value=""> 12:15 - 12:30</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="10" <?php orarioattivo(); ?> > 10:15 - 10:30</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1230" value=""> 12:30 - 12:45</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="11" <?php orarioattivo(); ?> > 10:30 - 10:45</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1245" value=""> 12:45 - 13:00</label></div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1300" value=""> 13:00 - 13:15</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1315" value=""> 13:15 - 13:30</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1330" value=""> 13:30 - 13:45</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1345" value=""> 13:45 - 14:00</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="12" <?php orarioattivo(); ?> > 10:45 - 11:00</label></div>
         </div>
       </div>
 
       <div class="row">
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1400" value=""> 14:00 - 14:15</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="13" <?php orarioattivo(); ?> > 11:00 - 11:15</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1415" value=""> 14:15 - 14:30</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="14" <?php orarioattivo(); ?> > 11:15 - 11:30</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1430" value=""> 14:30 - 14:45</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="15" <?php orarioattivo(); ?> > 11:30 - 11:45</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1445" value=""> 14:45 - 15:00</label></div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1500" value=""> 15:00 - 15:15</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1515" value=""> 15:15 - 15:30</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1530" value=""> 15:30 - 15:45</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1545" value=""> 15:45 - 16:00</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="16" <?php orarioattivo(); ?> > 11:45 - 12:00</label></div>
         </div>
       </div>
 
       <div class="row">
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1600" value=""> 16:00 - 16:15</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="17" <?php orarioattivo(); ?> > 12:00 - 12:15</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1615" value=""> 16:15 - 16:30</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="18" <?php orarioattivo(); ?> > 12:15 - 12:30</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1630" value=""> 16:30 - 16:45</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="19" <?php orarioattivo(); ?> > 12:30 - 12:45</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1645" value=""> 16:45 - 17:00</label></div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1700" value=""> 17:00 - 17:15</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1715" value=""> 17:15 - 17:30</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1730" value=""> 17:30 - 17:45</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1745" value=""> 17:45 - 18:00</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="20" <?php orarioattivo(); ?> > 12:45 - 13:00</label></div>
         </div>
       </div>
 
       <div class="row">
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1800" value=""> 18:00 - 18:15</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="21" <?php orarioattivo(); ?> > 13:00 - 13:15</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1815" value=""> 18:15 - 18:30</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="22" <?php orarioattivo(); ?> > 13:15 - 13:30</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1830" value=""> 18:30 - 18:45</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="23" <?php orarioattivo(); ?> > 13:30 - 13:45</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1845" value=""> 18:45 - 19:00</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="24" <?php orarioattivo(); ?> > 13:45 - 14:00</label></div>
         </div>
       </div>
 
       <div class="row">
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="2000" value=""> 20:00 - 20:15</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="25" <?php orarioattivo(); ?> > 14:00 - 14:15</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="2015" value=""> 20:15 - 20:30</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="26" <?php orarioattivo(); ?> > 14:15 - 14:30</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="2030" value=""> 20:30 - 20:45</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="27" <?php orarioattivo(); ?> > 14:30 - 14:45</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="2045" value=""> 20:45 - 21:00</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="28" <?php orarioattivo(); ?> > 14:45 - 15:00</label></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="29" <?php orarioattivo(); ?> > 15:00 - 15:15</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="30" <?php orarioattivo(); ?> > 15:15 - 15:30</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="31" <?php orarioattivo(); ?> > 15:30 - 15:45</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="32" <?php orarioattivo(); ?> > 15:45 - 16:00</label></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="33" <?php orarioattivo(); ?> > 16:00 - 16:15</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="34" <?php orarioattivo(); ?> > 16:15 - 16:30</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="35" <?php orarioattivo(); ?> > 16:30 - 16:45</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="36" <?php orarioattivo(); ?> > 16:45 - 17:00</label></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="37" <?php orarioattivo(); ?> > 17:00 - 17:15</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="38" <?php orarioattivo(); ?> > 17:15 - 17:30</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="39" <?php orarioattivo(); ?> > 17:30 - 17:45</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="40" <?php orarioattivo(); ?> > 17:45 - 18:00</label></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="41" <?php orarioattivo(); ?> > 18:00 - 18:15</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="42" <?php orarioattivo(); ?> > 18:15 - 18:30</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="43" <?php orarioattivo(); ?> > 18:30 - 18:45</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="44" <?php orarioattivo(); ?> > 18:45 - 19:00</label></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="45" <?php orarioattivo(); ?> > 20:00 - 20:15</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="46" <?php orarioattivo(); ?> > 20:15 - 20:30</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="47" <?php orarioattivo(); ?> > 20:30 - 20:45</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="48" <?php orarioattivo(); ?> > 20:45 - 21:00</label></div>
         </div>
       </div>
 
@@ -274,181 +276,181 @@
 
       <div class="row">
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="800" value=""> 8:00 - 8:15</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 8:00 - 8:15</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="815" value=""> 8:15 - 8:30</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 8:15 - 8:30</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="830" value=""> 8:30 - 8:45</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 8:30 - 8:45</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="845" value=""> 8:45 - 9:00</label></div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="900" value=""> 9:00 - 9:15</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="915" value=""> 9:15 - 9:30</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="930" value=""> 9:30 - 9:45</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="945" value=""> 9:45 - 10:00</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 8:45 - 9:00</label></div>
         </div>
       </div>
 
       <div class="row">
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1000" value=""> 10:00 - 10:15</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 9:00 - 9:15</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1015" value=""> 10:15 - 10:30</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 9:15 - 9:30</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1030" value=""> 10:30 - 10:45</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 9:30 - 9:45</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1045" value=""> 10:45 - 11:00</label></div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1100" value=""> 11:00 - 11:15</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1115" value=""> 11:15 - 11:30</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1130" value=""> 11:30 - 11:45</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1145" value=""> 11:45 - 12:00</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 9:45 - 10:00</label></div>
         </div>
       </div>
 
       <div class="row">
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1200" value=""> 12:00 - 12:15</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 10:00 - 10:15</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1215" value=""> 12:15 - 12:30</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 10:15 - 10:30</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1230" value=""> 12:30 - 12:45</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 10:30 - 10:45</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1245" value=""> 12:45 - 13:00</label></div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1300" value=""> 13:00 - 13:15</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1315" value=""> 13:15 - 13:30</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1330" value=""> 13:30 - 13:45</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1345" value=""> 13:45 - 14:00</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 10:45 - 11:00</label></div>
         </div>
       </div>
 
       <div class="row">
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1400" value=""> 14:00 - 14:15</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 11:00 - 11:15</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1415" value=""> 14:15 - 14:30</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 11:15 - 11:30</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1430" value=""> 14:30 - 14:45</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 11:30 - 11:45</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1445" value=""> 14:45 - 15:00</label></div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1500" value=""> 15:00 - 15:15</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1515" value=""> 15:15 - 15:30</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1530" value=""> 15:30 - 15:45</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1545" value=""> 15:45 - 16:00</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 11:45 - 12:00</label></div>
         </div>
       </div>
 
       <div class="row">
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1600" value=""> 16:00 - 16:15</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 12:00 - 12:15</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1615" value=""> 16:15 - 16:30</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 12:15 - 12:30</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1630" value=""> 16:30 - 16:45</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 12:30 - 12:45</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1645" value=""> 16:45 - 17:00</label></div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1700" value=""> 17:00 - 17:15</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1715" value=""> 17:15 - 17:30</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1730" value=""> 17:30 - 17:45</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1745" value=""> 17:45 - 18:00</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 12:45 - 13:00</label></div>
         </div>
       </div>
 
       <div class="row">
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1800" value=""> 18:00 - 18:15</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 13:00 - 13:15</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1815" value=""> 18:15 - 18:30</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 13:15 - 13:30</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1830" value=""> 18:30 - 18:45</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 13:30 - 13:45</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1845" value=""> 18:45 - 19:00</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 13:45 - 14:00</label></div>
         </div>
       </div>
 
       <div class="row">
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="2000" value=""> 20:00 - 20:15</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 14:00 - 14:15</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="2015" value=""> 20:15 - 20:30</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 14:15 - 14:30</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="2030" value=""> 20:30 - 20:45</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 14:30 - 14:45</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="2045" value=""> 20:45 - 21:00</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 14:45 - 15:00</label></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 15:00 - 15:15</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 15:15 - 15:30</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 15:30 - 15:45</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 15:45 - 16:00</label></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 16:00 - 16:15</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 16:15 - 16:30</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 16:30 - 16:45</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 16:45 - 17:00</label></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 17:00 - 17:15</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 17:15 - 17:30</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 17:30 - 17:45</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 17:45 - 18:00</label></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 18:00 - 18:15</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 18:15 - 18:30</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 18:30 - 18:45</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 18:45 - 19:00</label></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 20:00 - 20:15</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 20:15 - 20:30</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 20:30 - 20:45</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 20:45 - 21:00</label></div>
         </div>
       </div>
 
@@ -468,181 +470,181 @@
 
       <div class="row">
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="800" value=""> 8:00 - 8:15</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 8:00 - 8:15</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="815" value=""> 8:15 - 8:30</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 8:15 - 8:30</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="830" value=""> 8:30 - 8:45</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 8:30 - 8:45</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="845" value=""> 8:45 - 9:00</label></div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="900" value=""> 9:00 - 9:15</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="915" value=""> 9:15 - 9:30</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="930" value=""> 9:30 - 9:45</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="945" value=""> 9:45 - 10:00</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 8:45 - 9:00</label></div>
         </div>
       </div>
 
       <div class="row">
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1000" value=""> 10:00 - 10:15</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 9:00 - 9:15</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1015" value=""> 10:15 - 10:30</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 9:15 - 9:30</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1030" value=""> 10:30 - 10:45</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 9:30 - 9:45</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1045" value=""> 10:45 - 11:00</label></div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1100" value=""> 11:00 - 11:15</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1115" value=""> 11:15 - 11:30</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1130" value=""> 11:30 - 11:45</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1145" value=""> 11:45 - 12:00</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 9:45 - 10:00</label></div>
         </div>
       </div>
 
       <div class="row">
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1200" value=""> 12:00 - 12:15</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 10:00 - 10:15</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1215" value=""> 12:15 - 12:30</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 10:15 - 10:30</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1230" value=""> 12:30 - 12:45</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 10:30 - 10:45</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1245" value=""> 12:45 - 13:00</label></div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1300" value=""> 13:00 - 13:15</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1315" value=""> 13:15 - 13:30</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1330" value=""> 13:30 - 13:45</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1345" value=""> 13:45 - 14:00</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 10:45 - 11:00</label></div>
         </div>
       </div>
 
       <div class="row">
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1400" value=""> 14:00 - 14:15</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 11:00 - 11:15</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1415" value=""> 14:15 - 14:30</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 11:15 - 11:30</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1430" value=""> 14:30 - 14:45</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 11:30 - 11:45</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1445" value=""> 14:45 - 15:00</label></div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1500" value=""> 15:00 - 15:15</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1515" value=""> 15:15 - 15:30</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1530" value=""> 15:30 - 15:45</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1545" value=""> 15:45 - 16:00</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 11:45 - 12:00</label></div>
         </div>
       </div>
 
       <div class="row">
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1600" value=""> 16:00 - 16:15</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 12:00 - 12:15</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1615" value=""> 16:15 - 16:30</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 12:15 - 12:30</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1630" value=""> 16:30 - 16:45</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 12:30 - 12:45</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1645" value=""> 16:45 - 17:00</label></div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1700" value=""> 17:00 - 17:15</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1715" value=""> 17:15 - 17:30</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1730" value=""> 17:30 - 17:45</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1745" value=""> 17:45 - 18:00</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 12:45 - 13:00</label></div>
         </div>
       </div>
 
       <div class="row">
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1800" value=""> 18:00 - 18:15</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 13:00 - 13:15</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1815" value=""> 18:15 - 18:30</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 13:15 - 13:30</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1830" value=""> 18:30 - 18:45</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 13:30 - 13:45</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1845" value=""> 18:45 - 19:00</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 13:45 - 14:00</label></div>
         </div>
       </div>
 
       <div class="row">
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="2000" value=""> 20:00 - 20:15</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 14:00 - 14:15</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="2015" value=""> 20:15 - 20:30</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 14:15 - 14:30</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="2030" value=""> 20:30 - 20:45</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 14:30 - 14:45</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="2045" value=""> 20:45 - 21:00</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 14:45 - 15:00</label></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 15:00 - 15:15</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 15:15 - 15:30</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 15:30 - 15:45</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 15:45 - 16:00</label></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 16:00 - 16:15</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 16:15 - 16:30</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 16:30 - 16:45</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 16:45 - 17:00</label></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 17:00 - 17:15</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 17:15 - 17:30</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 17:30 - 17:45</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 17:45 - 18:00</label></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 18:00 - 18:15</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 18:15 - 18:30</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 18:30 - 18:45</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 18:45 - 19:00</label></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 20:00 - 20:15</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 20:15 - 20:30</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 20:30 - 20:45</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 20:45 - 21:00</label></div>
         </div>
       </div>
 
@@ -663,181 +665,181 @@
 
       <div class="row">
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="800" value=""> 8:00 - 8:15</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 8:00 - 8:15</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="815" value=""> 8:15 - 8:30</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 8:15 - 8:30</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="830" value=""> 8:30 - 8:45</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 8:30 - 8:45</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="845" value=""> 8:45 - 9:00</label></div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="900" value=""> 9:00 - 9:15</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="915" value=""> 9:15 - 9:30</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="930" value=""> 9:30 - 9:45</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="945" value=""> 9:45 - 10:00</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 8:45 - 9:00</label></div>
         </div>
       </div>
 
       <div class="row">
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1000" value=""> 10:00 - 10:15</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 9:00 - 9:15</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1015" value=""> 10:15 - 10:30</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 9:15 - 9:30</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1030" value=""> 10:30 - 10:45</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 9:30 - 9:45</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1045" value=""> 10:45 - 11:00</label></div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1100" value=""> 11:00 - 11:15</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1115" value=""> 11:15 - 11:30</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1130" value=""> 11:30 - 11:45</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1145" value=""> 11:45 - 12:00</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 9:45 - 10:00</label></div>
         </div>
       </div>
 
       <div class="row">
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1200" value=""> 12:00 - 12:15</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 10:00 - 10:15</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1215" value=""> 12:15 - 12:30</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 10:15 - 10:30</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1230" value=""> 12:30 - 12:45</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 10:30 - 10:45</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1245" value=""> 12:45 - 13:00</label></div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1300" value=""> 13:00 - 13:15</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1315" value=""> 13:15 - 13:30</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1330" value=""> 13:30 - 13:45</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1345" value=""> 13:45 - 14:00</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 10:45 - 11:00</label></div>
         </div>
       </div>
 
       <div class="row">
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1400" value=""> 14:00 - 14:15</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 11:00 - 11:15</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1415" value=""> 14:15 - 14:30</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 11:15 - 11:30</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1430" value=""> 14:30 - 14:45</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 11:30 - 11:45</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1445" value=""> 14:45 - 15:00</label></div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1500" value=""> 15:00 - 15:15</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1515" value=""> 15:15 - 15:30</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1530" value=""> 15:30 - 15:45</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1545" value=""> 15:45 - 16:00</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 11:45 - 12:00</label></div>
         </div>
       </div>
 
       <div class="row">
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1600" value=""> 16:00 - 16:15</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 12:00 - 12:15</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1615" value=""> 16:15 - 16:30</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 12:15 - 12:30</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1630" value=""> 16:30 - 16:45</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 12:30 - 12:45</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1645" value=""> 16:45 - 17:00</label></div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1700" value=""> 17:00 - 17:15</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1715" value=""> 17:15 - 17:30</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1730" value=""> 17:30 - 17:45</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1745" value=""> 17:45 - 18:00</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 12:45 - 13:00</label></div>
         </div>
       </div>
 
       <div class="row">
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1800" value=""> 18:00 - 18:15</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 13:00 - 13:15</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1815" value=""> 18:15 - 18:30</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 13:15 - 13:30</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1830" value=""> 18:30 - 18:45</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 13:30 - 13:45</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1845" value=""> 18:45 - 19:00</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 13:45 - 14:00</label></div>
         </div>
       </div>
 
       <div class="row">
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="2000" value=""> 20:00 - 20:15</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 14:00 - 14:15</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="2015" value=""> 20:15 - 20:30</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 14:15 - 14:30</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="2030" value=""> 20:30 - 20:45</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 14:30 - 14:45</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="2045" value=""> 20:45 - 21:00</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 14:45 - 15:00</label></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 15:00 - 15:15</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 15:15 - 15:30</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 15:30 - 15:45</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 15:45 - 16:00</label></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 16:00 - 16:15</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 16:15 - 16:30</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 16:30 - 16:45</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 16:45 - 17:00</label></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 17:00 - 17:15</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 17:15 - 17:30</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 17:30 - 17:45</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 17:45 - 18:00</label></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 18:00 - 18:15</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 18:15 - 18:30</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 18:30 - 18:45</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 18:45 - 19:00</label></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 20:00 - 20:15</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 20:15 - 20:30</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 20:30 - 20:45</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 20:45 - 21:00</label></div>
         </div>
       </div>
 
@@ -858,181 +860,181 @@
 
       <div class="row">
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="800" value=""> 8:00 - 8:15</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 8:00 - 8:15</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="815" value=""> 8:15 - 8:30</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 8:15 - 8:30</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="830" value=""> 8:30 - 8:45</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 8:30 - 8:45</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="845" value=""> 8:45 - 9:00</label></div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="900" value=""> 9:00 - 9:15</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="915" value=""> 9:15 - 9:30</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="930" value=""> 9:30 - 9:45</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="945" value=""> 9:45 - 10:00</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 8:45 - 9:00</label></div>
         </div>
       </div>
 
       <div class="row">
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1000" value=""> 10:00 - 10:15</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 9:00 - 9:15</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1015" value=""> 10:15 - 10:30</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 9:15 - 9:30</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1030" value=""> 10:30 - 10:45</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 9:30 - 9:45</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1045" value=""> 10:45 - 11:00</label></div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1100" value=""> 11:00 - 11:15</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1115" value=""> 11:15 - 11:30</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1130" value=""> 11:30 - 11:45</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1145" value=""> 11:45 - 12:00</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 9:45 - 10:00</label></div>
         </div>
       </div>
 
       <div class="row">
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1200" value=""> 12:00 - 12:15</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 10:00 - 10:15</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1215" value=""> 12:15 - 12:30</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 10:15 - 10:30</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1230" value=""> 12:30 - 12:45</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 10:30 - 10:45</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1245" value=""> 12:45 - 13:00</label></div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1300" value=""> 13:00 - 13:15</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1315" value=""> 13:15 - 13:30</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1330" value=""> 13:30 - 13:45</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1345" value=""> 13:45 - 14:00</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 10:45 - 11:00</label></div>
         </div>
       </div>
 
       <div class="row">
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1400" value=""> 14:00 - 14:15</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 11:00 - 11:15</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1415" value=""> 14:15 - 14:30</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 11:15 - 11:30</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1430" value=""> 14:30 - 14:45</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 11:30 - 11:45</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1445" value=""> 14:45 - 15:00</label></div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1500" value=""> 15:00 - 15:15</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1515" value=""> 15:15 - 15:30</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1530" value=""> 15:30 - 15:45</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1545" value=""> 15:45 - 16:00</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 11:45 - 12:00</label></div>
         </div>
       </div>
 
       <div class="row">
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1600" value=""> 16:00 - 16:15</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 12:00 - 12:15</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1615" value=""> 16:15 - 16:30</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 12:15 - 12:30</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1630" value=""> 16:30 - 16:45</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 12:30 - 12:45</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1645" value=""> 16:45 - 17:00</label></div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1700" value=""> 17:00 - 17:15</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1715" value=""> 17:15 - 17:30</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1730" value=""> 17:30 - 17:45</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1745" value=""> 17:45 - 18:00</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 12:45 - 13:00</label></div>
         </div>
       </div>
 
       <div class="row">
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1800" value=""> 18:00 - 18:15</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 13:00 - 13:15</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1815" value=""> 18:15 - 18:30</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 13:15 - 13:30</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1830" value=""> 18:30 - 18:45</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 13:30 - 13:45</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1845" value=""> 18:45 - 19:00</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 13:45 - 14:00</label></div>
         </div>
       </div>
 
       <div class="row">
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="2000" value=""> 20:00 - 20:15</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 14:00 - 14:15</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="2015" value=""> 20:15 - 20:30</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 14:15 - 14:30</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="2030" value=""> 20:30 - 20:45</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 14:30 - 14:45</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="2045" value=""> 20:45 - 21:00</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 14:45 - 15:00</label></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 15:00 - 15:15</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 15:15 - 15:30</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 15:30 - 15:45</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 15:45 - 16:00</label></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 16:00 - 16:15</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 16:15 - 16:30</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 16:30 - 16:45</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 16:45 - 17:00</label></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 17:00 - 17:15</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 17:15 - 17:30</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 17:30 - 17:45</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 17:45 - 18:00</label></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 18:00 - 18:15</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 18:15 - 18:30</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 18:30 - 18:45</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 18:45 - 19:00</label></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 20:00 - 20:15</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 20:15 - 20:30</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 20:30 - 20:45</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 20:45 - 21:00</label></div>
         </div>
       </div>
 
@@ -1053,181 +1055,181 @@
 
       <div class="row">
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="800" value=""> 8:00 - 8:15</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 8:00 - 8:15</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="815" value=""> 8:15 - 8:30</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 8:15 - 8:30</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="830" value=""> 8:30 - 8:45</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 8:30 - 8:45</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="845" value=""> 8:45 - 9:00</label></div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="900" value=""> 9:00 - 9:15</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="915" value=""> 9:15 - 9:30</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="930" value=""> 9:30 - 9:45</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="945" value=""> 9:45 - 10:00</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 8:45 - 9:00</label></div>
         </div>
       </div>
 
       <div class="row">
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1000" value=""> 10:00 - 10:15</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 9:00 - 9:15</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1015" value=""> 10:15 - 10:30</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 9:15 - 9:30</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1030" value=""> 10:30 - 10:45</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 9:30 - 9:45</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1045" value=""> 10:45 - 11:00</label></div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1100" value=""> 11:00 - 11:15</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1115" value=""> 11:15 - 11:30</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1130" value=""> 11:30 - 11:45</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1145" value=""> 11:45 - 12:00</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 9:45 - 10:00</label></div>
         </div>
       </div>
 
       <div class="row">
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1200" value=""> 12:00 - 12:15</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 10:00 - 10:15</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1215" value=""> 12:15 - 12:30</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 10:15 - 10:30</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1230" value=""> 12:30 - 12:45</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 10:30 - 10:45</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1245" value=""> 12:45 - 13:00</label></div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1300" value=""> 13:00 - 13:15</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1315" value=""> 13:15 - 13:30</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1330" value=""> 13:30 - 13:45</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1345" value=""> 13:45 - 14:00</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 10:45 - 11:00</label></div>
         </div>
       </div>
 
       <div class="row">
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1400" value=""> 14:00 - 14:15</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 11:00 - 11:15</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1415" value=""> 14:15 - 14:30</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 11:15 - 11:30</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1430" value=""> 14:30 - 14:45</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 11:30 - 11:45</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1445" value=""> 14:45 - 15:00</label></div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1500" value=""> 15:00 - 15:15</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1515" value=""> 15:15 - 15:30</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1530" value=""> 15:30 - 15:45</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1545" value=""> 15:45 - 16:00</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 11:45 - 12:00</label></div>
         </div>
       </div>
 
       <div class="row">
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1600" value=""> 16:00 - 16:15</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 12:00 - 12:15</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1615" value=""> 16:15 - 16:30</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 12:15 - 12:30</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1630" value=""> 16:30 - 16:45</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 12:30 - 12:45</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1645" value=""> 16:45 - 17:00</label></div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1700" value=""> 17:00 - 17:15</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1715" value=""> 17:15 - 17:30</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1730" value=""> 17:30 - 17:45</label></div>
-        </div>
-        <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1745" value=""> 17:45 - 18:00</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 12:45 - 13:00</label></div>
         </div>
       </div>
 
       <div class="row">
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1800" value=""> 18:00 - 18:15</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 13:00 - 13:15</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1815" value=""> 18:15 - 18:30</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 13:15 - 13:30</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1830" value=""> 18:30 - 18:45</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 13:30 - 13:45</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="1845" value=""> 18:45 - 19:00</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 13:45 - 14:00</label></div>
         </div>
       </div>
 
       <div class="row">
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="2000" value=""> 20:00 - 20:15</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 14:00 - 14:15</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="2015" value=""> 20:15 - 20:30</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 14:15 - 14:30</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="2030" value=""> 20:30 - 20:45</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 14:30 - 14:45</label></div>
         </div>
         <div class="col-lg-3">
-          <div class="checkbox"><label><input type="checkbox" name="2045" value=""> 20:45 - 21:00</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 14:45 - 15:00</label></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 15:00 - 15:15</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 15:15 - 15:30</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 15:30 - 15:45</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 15:45 - 16:00</label></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 16:00 - 16:15</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 16:15 - 16:30</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 16:30 - 16:45</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 16:45 - 17:00</label></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 17:00 - 17:15</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 17:15 - 17:30</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 17:30 - 17:45</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 17:45 - 18:00</label></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 18:00 - 18:15</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 18:15 - 18:30</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 18:30 - 18:45</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 18:45 - 19:00</label></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 20:00 - 20:15</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 20:15 - 20:30</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 20:30 - 20:45</label></div>
+        </div>
+        <div class="col-lg-3">
+          <div class="checkbox"><label><input type="checkbox" name="" <?php orarioattivo(); ?> > 20:45 - 21:00</label></div>
         </div>
       </div>
 
