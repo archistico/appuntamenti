@@ -127,13 +127,13 @@
           }
           
         }
-		    if($giornoattuale != $giornoprecedente) {echo "<!-- TABELLA --><div class='row'><div class='col-lg-12'><table class='table table-bordered'><thead><tr><th>#</th><th>Ora</th><th>Nome</th><th>Note</th></tr></thead><tbody>"; }
+		    if($giornoattuale != $giornoprecedente) {echo "<!-- TABELLA --><div class='row'><div class='col-lg-12'><table class='table table-bordered'><thead><tr><th>Ora</th><th>Nome</th><th>Note</th></tr></thead><tbody>"; }
         
         if($giornoattuale != $giornoprecedente) {
         foreach($appuntamenti as $app) {
           if($app->data == $giornoattuale) {
               echo "<tr>";
-              echo "<td>"; echo $app->idapp; echo "</td>";
+              //echo "<td>"; echo $app->idapp; echo "</td>";
               echo "<td>"; echo $app->orario; echo "</td>";
               echo "<td>"; echo $app->nome; echo "</td>";
               echo "<td>"; echo $app->note; echo "</td>";
