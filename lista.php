@@ -44,7 +44,7 @@
           <li><a href="index.php">Home</a></li>
           <!-- <li><a href="#">Nuovo</a></li> -->
           <li class="active"><a href="lista.php">Lista</a></li>
-		  <li><a href="opzioni.php">Opzioni</a></li>
+		      <li><a href="opzioni.php">Opzioni</a></li>
         </ul>
         <h3 class="text-muted">Dott.ssa Rollandin Christine</h3>
       </div>

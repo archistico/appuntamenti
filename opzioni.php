@@ -50,7 +50,7 @@ $orari = caricaDatiOrario();
           <li><a href="index.php">Home</a></li>
           <!-- <li><a href="#">Nuovo</a></li> -->
           <li><a href="lista.php">Lista</a></li>
-		  <li class="active"><a href="opzionisql.php">Opzioni</a></li>
+		      <li class="active"><a href="opzioni.php">Opzioni</a></li>
         </ul>
         <h3 class="text-muted">Dott.ssa Rollandin Christine</h3>
       </div>
