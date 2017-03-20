@@ -125,7 +125,7 @@
         $db->setAttribute(PDO::MYSQL_ATTR_INIT_COMMAND, 'SET NAMES UTF8');
 
         //$sql = "SELECT * FROM orario WHERE giornosettimana = '".$giornosettimana."';";
-        $sql = "SELECT * FROM orario WHERE attivo = 1 AND giornosettimana = '".$giornosettimana."';";
+        $sql = "SELECT * FROM orario WHERE  giornosettimana = '".$giornosettimana."';";
         
         $result = $db->query($sql);
         $primo = true;
@@ -139,11 +139,20 @@
             $controllo = ($occupato[$row['idorario']] != '')?'disabled':'';
             $occupatonome = $occupato[$row['idorario']];
             //$attivo = $row['attivo'];
+            /*
             if($primo == true) {
+              // metti il selezionato sul primo orario disponibile
               echo "<div class='radio'><label><input type='radio' name='fkorario' id='".$row['idorario']."' value='".$row['idorario']."' ".$controllo." autofocus required>".$row['ora']." ".$occupatonome."</label></div>";  
               $primo = false;
             } else {
               echo "<div class='radio'><label><input type='radio' name='fkorario' id='".$row['idorario']."' value='".$row['idorario']."' ".$controllo." >".$row['ora']." ".$occupatonome."</label></div>";
+            }
+            */
+             if($row['attivo']==1) {
+              // metti il selezionato sul primo orario disponibile
+              echo "<div class='radio'><label><input type='radio' name='fkorario' id='".$row['idorario']."' value='".$row['idorario']."' ".$controllo." required>".$row['ora']." ".$occupatonome."</label></div>"; 
+            } else {
+              echo "<div class='radio'><label><input type='radio' name='fkorario' id='".$row['idorario']."' value='".$row['idorario']."' ".$controllo." required><span style='color: red;'>".$row['ora']." ".$occupatonome."</span></label></div>";
             }
             
         }
