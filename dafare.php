@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -43,9 +42,9 @@
         <ul class="nav nav-pills pull-right">
           <li><a href="index.php">Home</a></li>
           <!-- <li><a href="#">Nuovo</a></li> -->
-          <li class="active"><a href="lista.php">Lista</a></li>
+          <li><a href="lista.php">Lista</a></li>
 		      <li><a href="opzioni.php">Opzioni</a></li>
-          <li><a href="dafare.php">Da fare</a></li>
+          <li class="active"><a href="dafare.php">Da fare</a></li>
         </ul>
         <h3 class="text-muted">Dott.ssa <br>Rollandin Christine</h3>
       </div>
@@ -53,7 +52,7 @@
       <div class="jumbotron">
         <h1>Appuntamenti</h1>
       </div>
-      
+
       <?php
             session_start();
             if(isset($_SESSION['sqlerrori'])) {
@@ -68,27 +67,41 @@
             }
 
       ?>
+		
+		<form name="Form" action="compitoaggiungi.php" method="get">
+      
+	  <div class="row">
+	    <div class="col-lg-12">      
+		    <div class="form-group">
+             <label>Scrivi il nuovo compito</label>
+             <input type="text" class="form-control" placeholder="Da fare" name='dafare' required>
+        </div>
+      </div>
+    </div>
+	  <div class="row">
+	    <div class="col-lg-12">
+        <button type="submit" class="btn btn-block btn-primary btn-lg">AGGIUNGERE</button>
+      </div>
+    </div>
+	  	  
+	  </form>
+    <br>
 
 
-      <?php 
+          <?php 
 
       // CARICA I DATI
 
-      class Appuntamento {
-        public $idapp;
+      class Compito {
+        public $idcompito;
         public $data;
-        public $giornosettimana;
-        public $fkorario;
-        public $orario;
-        public $nome;
-        public $note;
+        public $compito;
       }
 
       include 'config.php';
 
-      $appuntamenti = array();
+      $compiti = array();
 
-      // segna tutti gli idorario occupati nel giorno
       try {
 
           $db = new PDO("mysql:host=" . $dbhost . ";dbname=" . $dbname, $dbuser, $dbpswd);
@@ -96,26 +109,19 @@
           $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
           $db->setAttribute(PDO::MYSQL_ATTR_INIT_COMMAND, 'SET NAMES UTF8');
 
-          $sql = "SELECT app.idapp, app.data, app.fkorario, app.nome, app.note, orario.ora
-                  FROM app
-                  INNER JOIN orario ON app.fkorario = orario.idorario
-                  ORDER BY app.data DESC, app.fkorario ASC
+          $sql = "SELECT *
+                  FROM compiti
+                  ORDER BY compiti.data DESC
                   ";
 
           $result = $db->query($sql);
           foreach ($result as $row) {
               $row = get_object_vars($row);
-              $appuntamenti[$row['idapp']] = new Appuntamento();
-              $appuntamenti[$row['idapp']]->idapp = $row['idapp'];
+              $compiti[$row['idcompito']] = new Compito();
+              $compiti[$row['idcompito']]->idcompito = $row['idcompito'];
               $data = DateTime::createFromFormat('Y-m-d', $row['data']);
-              $appuntamenti[$row['idapp']]->data = $data->format('d-m-Y');
-              $formatterLungo = new IntlDateFormatter('it_IT', IntlDateFormatter::SHORT, IntlDateFormatter::SHORT);
-              $formatterLungo->setPattern('EEEE');
-              $appuntamenti[$row['idapp']]->giornosettimana = $formatterLungo->format($data);
-              $appuntamenti[$row['idapp']]->fkorario = $row['fkorario'];
-              $appuntamenti[$row['idapp']]->orario = $row['ora'];
-              $appuntamenti[$row['idapp']]->nome = $row['nome'];
-              $appuntamenti[$row['idapp']]->note = $row['note'];
+              $compiti[$row['idcompito']]->data = $data->format('d-m-Y');
+              $compiti[$row['idcompito']]->compito = $row['compito'];
           }
           // chiude il database
           $db = NULL;
@@ -124,50 +130,33 @@
          throw new PDOException("Error  : " . $e->getMessage());
       }
       
-      //echo "<pre>"; var_dump($appuntamenti); echo "</pre>"; die();
-
-      ?>
-
-      <?php
-
-      $giornoattuale = '';
-      $giornoprecedente = '';
-      foreach($appuntamenti as $app) {
-        $giornoattuale = $app->data;
-        if($giornoattuale != $giornoprecedente) {
-
-          if(date("d-m-Y")==$giornoattuale) { 
-            echo "<!-- GIORNO --><div class='row'><div class='col-lg-12'><h2 class='bg-primary'>$app->giornosettimana $giornoattuale - OGGI</h2></div></div>"; 
-          } else {
-            echo "<!-- GIORNO --><div class='row'><div class='col-lg-12'><h2>$app->giornosettimana $giornoattuale</h2></div></div>"; 
-          }
+      //echo "<pre>"; var_dump($compiti); echo "</pre>"; die();
+        
+		    echo "<!-- TABELLA --><div class='row'><div class='col-lg-12'><h2>Lista compiti</h2><table class='table table-bordered'><thead><tr><th>Data</th><th>Compito</th><th>#</th></tr></thead><tbody>"; 
+        
+        foreach($compiti as $com) {
           
-        }
-		    if($giornoattuale != $giornoprecedente) {echo "<!-- TABELLA --><div class='row'><div class='col-lg-12'><table class='table table-bordered'><thead><tr><th>Ora</th><th>Nome</th><th>Note</th><th>#</th></tr></thead><tbody>"; }
-        
-        if($giornoattuale != $giornoprecedente) {
-        foreach($appuntamenti as $app) {
-          if($app->data == $giornoattuale) {
               echo "<tr>";
-              //echo "<td>"; echo $app->idapp; echo "</td>";
-              echo "<td>"; echo $app->orario; echo "</td>";
-              echo "<td>"; echo $app->nome; echo "</td>";
-              echo "<td>"; echo $app->note; echo "</td>";
-              echo "<td style='width: 30px;margin-right: 3px; margin-bottom: 3px'><a class='btn btn-xs btn-danger' href='appuntamentocancella.php?id=".$app->idapp."' role='button'>X</a></td>";
+              echo "<td>"; echo $com->data; echo "</td>";
+              echo "<td>"; echo $com->compito; echo "</td>";
+              echo "<td style='width: 30px;margin-right: 3px; margin-bottom: 3px'><a class='btn btn-xs btn-danger' href='compitocancella.php?id=".$com->idcompito."' role='button'>X</a></td>";
               echo "</tr>";
-          }              
+                        
         }          
-        }
-        if($giornoattuale != $giornoprecedente) {echo "</tbody></table></div></div><!-- FINE TABELLA -->";}
-        $giornoprecedente = $giornoattuale;
-      }
+        
+        echo "</tbody></table></div></div><!-- FINE TABELLA -->";
+        
+      
         
       ?>
-	  
-      <br>
+
+
+
+
+
 	  <div class="footer">
         <p>2017 &copy; Archistico by Emilie Rollandin</p>
-      </div>
+    </div>
 
     </div> <!-- /container -->
 
@@ -182,6 +171,8 @@
 	<script src="dist/air-datepicker/js/datepicker.min.js"></script>
 	<!-- Include Italian language -->
     <script src="dist/air-datepicker/js/i18n/datepicker.it.js"></script>
+	<script src="dist/moment/moment-with-locales.js"></script>
+	
 	
   </body>
 </html>

@@ -15,29 +15,13 @@ function pulisciStringa($stringa) {
     return addslashes(trim($stringa));
 }
 
-if (isset($_GET['nome'])) {
-    $nome = pulisciStringa($_GET['nome']);
-} else {
-    $errors['nome'] = 'nome non passato';
-}
+$data = new DateTime();
+$datastringa = $data->format('Y-m-d');
 
-if (isset($_GET['data'])) {
-    $data = DateTime::createFromFormat('d-m-Y', $_GET['data']);
-    $datastringa = $data->format('Y-m-d');
+if (isset($_GET['dafare'])) {
+    $compito = pulisciStringa($_GET['dafare']);
 } else {
-    $errors['data'] = 'data non passato';
-}
-
-if (isset($_GET['note'])) {
-    $note = pulisciStringa($_GET['note']);
-} else {
-    $errors['note'] = 'note non passato';
-}
-
-if (isset($_GET['fkorario'])) {
-    $fkorario = $_GET['fkorario'];
-} else {
-    $errors['fkorario'] = 'fkorario non passato';
+    $errors['dafare'] = 'compito non passato';
 }
 
 // FINE CARICA DATI
@@ -50,7 +34,7 @@ if (empty($errors)) {
         $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
         $db->setAttribute(PDO::MYSQL_ATTR_INIT_COMMAND, 'SET NAMES UTF8');
 
-        $sql = "INSERT INTO app (idapp, data, fkorario, nome, note) VALUES (NULL, '$datastringa', '$fkorario', '$nome', '$note');";
+        $sql = "INSERT INTO compiti (idcompito, data, compito) VALUES (NULL, '$datastringa', '$compito');";
 
         $db->exec($sql);
 
@@ -70,4 +54,4 @@ if (!empty($errors)) {
     $_SESSION['sqlok'] = "OPERAZIONE RIUSCITA";
 }
 
-header('Location: ./lista.php');
+header('Location: ./dafare.php');

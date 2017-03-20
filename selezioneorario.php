@@ -44,13 +44,13 @@
           <!-- <li><a href="#">Nuovo</a></li> -->
           <li><a href="lista.php">Lista</a></li>
 		  <li><a href="opzioni.php">Opzioni</a></li>
+      <li><a href="dafare.php">Da fare</a></li>
         </ul>
-        <h3 class="text-muted">Dott.ssa Rollandin Christine</h3>
+        <h3 class="text-muted">Dott.ssa <br>Rollandin Christine</h3>
       </div>
 
       <div class="jumbotron">
         <h1>Appuntamenti</h1>
-        <p class="lead">Sito dello studio in cui sono segnati gli appuntamenti</p>
       </div>
 		
 		<form name="Form" action="aggiunto.php" method="get">
@@ -124,8 +124,9 @@
         $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
         $db->setAttribute(PDO::MYSQL_ATTR_INIT_COMMAND, 'SET NAMES UTF8');
 
+        //$sql = "SELECT * FROM orario WHERE giornosettimana = '".$giornosettimana."';";
         $sql = "SELECT * FROM orario WHERE attivo = 1 AND giornosettimana = '".$giornosettimana."';";
-
+        
         $result = $db->query($sql);
         $primo = true;
 
@@ -137,6 +138,7 @@
             // il primo elemento mettilo in autofocus e richesto
             $controllo = ($occupato[$row['idorario']] != '')?'disabled':'';
             $occupatonome = $occupato[$row['idorario']];
+            //$attivo = $row['attivo'];
             if($primo == true) {
               echo "<div class='radio'><label><input type='radio' name='fkorario' id='".$row['idorario']."' value='".$row['idorario']."' ".$controllo." autofocus required>".$row['ora']." ".$occupatonome."</label></div>";  
               $primo = false;

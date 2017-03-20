@@ -3,6 +3,6 @@
 $dbhost = "localhost";
 $dbname = "appuntamento";
 $dbuser = "root";
-$dbpswd = "";
+$dbpswd = "stronza77php";
 
 ?>

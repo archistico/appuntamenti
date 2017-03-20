@@ -51,13 +51,13 @@ $orari = caricaDatiOrario();
           <!-- <li><a href="#">Nuovo</a></li> -->
           <li><a href="lista.php">Lista</a></li>
 		      <li class="active"><a href="opzioni.php">Opzioni</a></li>
+          <li><a href="dafare.php">Da fare</a></li>
         </ul>
-        <h3 class="text-muted">Dott.ssa Rollandin Christine</h3>
+        <h3 class="text-muted">Dott.ssa <br>Rollandin Christine</h3>
       </div>
 
       <div class="jumbotron">
         <h1>Appuntamenti</h1>
-        <p class="lead">Sito dello studio in cui sono segnati gli appuntamenti</p>
       </div>
 
       <div>
