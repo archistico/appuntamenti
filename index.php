@@ -19,6 +19,7 @@
    
     <!-- Google Fonts -->
    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet"> 
 
 	<!-- Air-datepicker -->
 	<link href="dist/air-datepicker/css/datepicker.min.css" rel="stylesheet" type="text/css">
@@ -46,22 +47,16 @@
 		      <li><a href="opzioni.php">Opzioni</a></li>
           <li><a href="dafare.php">Da fare</a></li>
         </ul>
-        <h3 class="text-muted">Dott.ssa <br>Rollandin Christine</h3>
+        <h3 class="text-muted corsivo">Dott.ssa Rollandin Christine</h3>
       </div>
 
       <div class="jumbotron">
-        <h1>Appuntamenti</h1>
+        <h1 class="corsivo">Nuovo appuntamento</h1>
       </div>
 		
 		<form name="Form" action="selezioneorario.php" method="get">
 		
-		<div class="row">
-	    <div class="col-lg-12">
-		<div class="progress">
-			<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width:30%">30%</div>
-		</div>
-		</div>
-		</div>
+		
       
 	  <div class="row">
 	  
