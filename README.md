@@ -1,4 +1,4 @@
-[![screenshot](https://s14.postimg.org/awe9bl0ip/screenshot.jpg)](https://postimg.org/image/700xflfj1/)
+[![screenshot](https://raw.githubusercontent.com/archistico/appuntamenti/master/screenshot.png)](https://raw.githubusercontent.com/archistico/appuntamenti/master/screenshot.png)
 
 # APPUNTAMENTI
 
