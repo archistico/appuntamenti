@@ -47,7 +47,7 @@
 		      <li><a href="opzioni.php">Opzioni</a></li>
           <li class="active"><a href="dafare.php">Da fare</a></li>
         </ul>
-        <h3 class="text-muted corsivo">Dott.ssa Rollandin Christine</h3>
+        <h3 class="text-muted corsivo">Appuntamenti</h3>
       </div>
 
       <div class="jumbotron">
@@ -105,7 +105,9 @@
 
       try {
 
-          $db = new PDO("mysql:host=" . $dbhost . ";dbname=" . $dbname, $dbuser, $dbpswd);
+          $db = new PDO("mysql:host=$dbhost;port=$dbport;dbname=$dbname",$dbuser,$dbpswd);
+
+          //$db = new PDO("mysql:host=$dbhost;port=$dbport;dbname=$dbname",$dbuser,$dbpswd);
           $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
           $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
           $db->setAttribute(PDO::MYSQL_ATTR_INIT_COMMAND, 'SET NAMES UTF8');
